@@ -110,7 +110,7 @@ function renderListStudent()
         <td>Số điện thoại</td>\
         <td>Địa chỉ</td>
         <td>Giới tính</td>
-         <td></td>
+         <td width="100px"></td>
     </tr>`;
 
     students.forEach((student, index) => {

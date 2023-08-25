@@ -44,6 +44,13 @@ button {
 table {
     width: 600px;
     border: 1px solid #000000;
+    display: contents;
+  
+}
+table tr td {
+    border: 1px solid #000000;
+    padding: 5px;
+ 
 }
 .error {
     color: red;
