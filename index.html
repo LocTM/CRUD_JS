@@ -15,28 +15,41 @@
         <br>
 
         <label>Email</label>
-        <input type="text" id="fullname" placeholder="Nhập địa chỉ Email">
+        <input type="text" id="email" placeholder="Nhập địa chỉ Email">
         <br>
 
         <label>Số điện thoại</label>
-        <input type="text" id="fullname" placeholder="Nhập số điện thoại">
+        <input type="text" id="phone" placeholder="Nhập số điện thoại">
         <br>
 
         <label>Địa chỉ</label>
-        <input type="text" id="fullname" placeholder="Nhập địa chỉ ">
+        <input type="text" id="address" placeholder="Nhập địa chỉ ">
         <br>
 
         <label>Giới tính</label>
         <input type="radio" name="gender" id="male" value="1"> Male
-        <input type="radio" name="gender" id="male" value="2"> Female
+        <input type="radio" name="gender" id="famale" value="2"> Female
         <br>
 
         <label>&nbsp;</label> 
         <br>
-        <button>Save</button>
-
+        <button onclick="save()">Save</button>
     </div>
-    
+
+    <div class="list-student">
+        <h2>DANH SÁCH SINH VIÊN</h2>
+        <table>
+            <tr>
+                <td>#</td>
+                <td>Họ và tên</td>
+                <td>Email</td>
+                <td>Số điện thoại</td>
+                <td>Địa chỉ</td>
+                <td>Hành động</td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>

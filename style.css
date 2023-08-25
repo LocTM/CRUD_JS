@@ -4,13 +4,18 @@
     box-sizing: border-box;
 }
 
-div.form-student {
+div.form-student, div.list-student {
     width: 500px;
     border: 1px solid #000000;
     margin: 25px;
     padding: 10px;
+    float: left;
 }
 
+div.list-student {
+    width: 620px;
+ 
+}
 div.form-student h3 {
     padding: 0;
     margin-top: 0;
@@ -21,12 +26,20 @@ div.form-student label {
     float: left;
 }
 
-div.form-student input[type="text"], button {
-    width: 10px;
+div.form-student input[type="text"] {
+    width: 200px;
     margin-bottom: 10px;
     padding: 5px;
 }
 
 button {
-    margin-top: 15px;
+    margin-top: 10px;
+    margin-left: 100px;
+    width: 60px;
+    height: 30px;
+}
+
+table {
+    width: 600px;
+    border: 1px solid #000000;
 }
