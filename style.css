@@ -5,7 +5,7 @@
 }
 
 div.form-student, div.list-student {
-    width: 500px;
+    width: 550px;
     border: 1px solid #000000;
     margin: 25px;
     padding: 10px;
@@ -42,4 +42,7 @@ button {
 table {
     width: 600px;
     border: 1px solid #000000;
+}
+.error {
+    color: red;
 }
