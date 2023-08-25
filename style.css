@@ -16,9 +16,11 @@ div.list-student {
     width: 620px;
  
 }
-div.form-student h3 {
+div.form-student h2, .list-student h2 {
     padding: 0;
     margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 div.form-student label {
@@ -45,4 +47,12 @@ table {
 }
 .error {
     color: red;
+}
+
+#grid-studens
+{
+    width: 100%;
+    border-collapse: collapse;
+    color: #000000;
+
 }

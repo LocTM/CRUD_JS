@@ -110,7 +110,7 @@ function renderListStudent()
         <td>Số điện thoại</td>\
         <td>Địa chỉ</td>
         <td>Giới tính</td>
-         <td>Hành động</td>
+         <td></td>
     </tr>`;
 
     students.forEach((student, index) => {
@@ -125,7 +125,7 @@ function renderListStudent()
             <td>${student.phone}</td>
             <td>${student.address}</td>
             <td>${genderLabel}</td>
-            <td> <a href="#" >Sửa</a> | <a href="#" onclick='deleteStudent(${studentId})' >Xóa</a> </td>
+            <td> <a href="#" onclick='editStudent(${studentId})'>Sửa</a> | <a href="#" onclick='deleteStudent(${studentId})' >Xóa</a> </td>
         </tr>`; 
     })
     document.getElementById("grid-studens").innerHTML = tableContent;
@@ -139,4 +139,12 @@ function deleteStudent(id) {
     renderListStudent();
 }
 
-    
+function editStudent(id) {
+    let students = localStorage.getItem('students') ? JSON.parse(localStorage.getItem('students')) : [];
+    let student = students[id];
+    document.getElementById('fullname').value = student.fullname;
+    document.getElementById('email').value = student.email;
+    document.getElementById('phone').value = student.phone;
+    document.getElementById('address').value = student.address;
+
+}
