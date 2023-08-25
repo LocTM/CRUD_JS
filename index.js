@@ -3,9 +3,6 @@ function emailIsValid (email) {
 }
 
 
-
-
-
 function save() {
     let fullname = document.getElementById("fullname").value;
     let email = document.getElementById("email").value;
@@ -51,10 +48,7 @@ function save() {
     if(_.isEmpty(phone)) {
         phone = '';
         document.getElementById("phone-error").innerHTML = "Vui lòng nhập số điện thoại"; 
-    } else if(phone.trim().length < 10) {
-        phone = '';
-        document.getElementById("phone-error").innerHTML = "Không được nhỏ hơn 10 ký tự";
-    } else if(phone.trim().length > 10) {
+    }  else if(phone.trim().length > 10) {
         phone = '';
         document.getElementById("phone-error").innerHTML = "Số điện thoại không hợp lệ";
     } else {    
@@ -78,7 +72,64 @@ function save() {
     }
 
     if (fullname && email && phone && address && gender) {
-        //lưu thông tin
+        //lưu thông tin vào danh sách sinh viên
         
+        let students = localStorage.getItem('students') ? JSON.parse(localStorage.getItem('students')) : [];
+        
+        
+        students.push({
+            fullname: fullname,
+            email: email,
+            phone: phone,
+            address: address,
+            gender: gender,
+        });
+
+        localStorage.setItem('students', JSON.stringify(students));
+
+        this.renderListStudent();
     }
+    // xong phần lưu thông tin
 } 
+function renderListStudent() 
+{
+    let students = localStorage.getItem('students') ? JSON.parse(localStorage.getItem('students')) : [];
+    if (students.length === 0) { 
+        document.getElementById('list-student').style.display = 'none';
+        return false;
+        
+    } 
+
+    document.getElementById('list-student').style.display = 'block';
+
+    let tableContent =  
+    `<tr>
+        <td width="30px">#</td>
+        <td>Họ và tên</td>
+        <td>Email</td>
+        <td>Số điện thoại</td>\
+        <td>Địa chỉ</td>
+        <td>Giới tính</td>
+         <td>Hành động</td>
+    </tr>`;
+
+    students.forEach((student, index) => {
+        index++;
+        let genderLabel = parseInt(student.gender) === 1 ? 'Nam' : 'Nữ';
+        
+        tableContent += 
+        `<tr>
+            <td>${index}</td>
+            <td>${student.fullname}</td>
+            <td>${student.email}</td>
+            <td>${student.phone}</td>
+            <td>${student.address}</td>
+            <td>${genderLabel}</td>
+            <td> <a href="#">Sửa</a> | <a href="#">Xóa</a> </td>
+        </tr>`;
+    })
+    document.getElementById("grid-studens").innerHTML = tableContent;
+ 
+} 
+
+    
