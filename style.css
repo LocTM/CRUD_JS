@@ -1,9 +1,32 @@
-.table
-{
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 20px;
-    border-collapse: collapse;
-    border-spacing: 0;
-    background-color: transparent;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div.form-student {
+    width: 500px;
+    border: 1px solid #000000;
+    margin: 25px;
+    padding: 10px;
+}
+
+div.form-student h3 {
+    padding: 0;
+    margin-top: 0;
+}
+
+div.form-student label {
+    width: 100px;
+    float: left;
+}
+
+div.form-student input[type="text"], button {
+    width: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+button {
+    margin-top: 15px;
 }
