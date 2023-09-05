@@ -1,65 +1,62 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-div.form-student, div.list-student {
-    width: 550px;
-    border: 1px solid #000000;
-    margin: 25px;
-    padding: 10px;
-    float: left;
+div.form-student,
+div.list-student {
+  width: 550px;
+  border: 1px solid #000000;
+  margin: 25px;
+  padding: 10px;
+  float: left;
 }
 
 div.list-student {
-    width: 620px;
- 
+  width: 620px;
 }
-div.form-student h2, .list-student h2 {
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 10px;
-    text-align: center;
+div.form-student h2,
+.list-student h2 {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 div.form-student label {
-    width: 100px;
-    float: left;
+  width: 100px;
+  float: left;
 }
 
 div.form-student input[type="text"] {
-    width: 200px;
-    margin-bottom: 10px;
-    padding: 5px;
+  width: 200px;
+  margin-bottom: 10px;
+  padding: 5px;
 }
 
 button {
-    margin-top: 10px;
-    margin-left: 100px;
-    width: 60px;
-    height: 30px;
+  margin-top: 10px;
+  margin-left: 100px;
+  width: 60px;
+  height: 30px;
 }
 
 table {
-    width: 600px;
-    border: 1px solid #000000;
-    display: contents;
-  
+  width: 600px;
+  border: 1px solid #000000;
+  display: contents;
 }
 table tr td {
-    border: 1px solid #000000;
-    padding: 5px;
- 
+  border: 1px solid #000000;
+  padding: 5px;
 }
 .error {
-    color: red;
+  color: red;
 }
 
-#grid-studens
-{
-    width: 100%;
-    border-collapse: collapse;
-    color: #000000;
-
+#grid-studens {
+  width: 100%;
+  border-collapse: collapse;
+  color: #000000;
 }
